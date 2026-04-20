@@ -173,12 +173,15 @@ export default function Campus() {
       <div className="ca-location pg-reveal">
         <div className="ca-loc-inner">
           <div className="ca-loc-map">
-            <div className="ca-loc-map-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-              <p>Campus Map</p>
-            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5516!2d32.5735!3d-23.8733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ecefad000000001%3A0x1234567890abcdef!2sAga%20Khan%20Academy%20Maputo!5e0!3m2!1sen!2smz!4v1234567890" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 'none', borderRadius: '8px' }}
+              allowFullScreen 
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
           <div>
             <div className="pg-tag" style={{ color: 'var(--g400)' }}>Find Us</div>

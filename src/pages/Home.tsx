@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import schoolImage1 from '../assets/WhatsApp Image 2026-04-18 at 07.44.44.jpeg'
+import schoolImage2 from '../assets/WhatsApp Image 2026-04-18 at 07.44.44 (1).jpeg'
 
 const PhotoPlaceholder = ({ caption, bg }: { caption: string; bg?: string }) => (
   <div className="img-placeholder" style={bg ? { background: bg } : undefined}>
@@ -68,20 +70,7 @@ export default function Home() {
             <a href="#about" className="btn-ghost">Discover the Academy</a>
           </div>
         </div>
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <div className="hero-stat-num">3<span>rd</span></div>
-            <div className="hero-stat-label">AKA Globally</div>
-          </div>
-          <div className="hero-stat">
-            <div className="hero-stat-num">K<span>–</span>12</div>
-            <div className="hero-stat-label">Full Programme</div>
-          </div>
-          <div className="hero-stat">
-            <div className="hero-stat-num">40<span>+</span></div>
-            <div className="hero-stat-label">Nationalities</div>
-          </div>
-        </div>
+
         <div className="scroll-indicator">
           <div className="scroll-line"></div>
           <span>Scroll</span>
@@ -118,7 +107,7 @@ export default function Home() {
           <Link to="/about" className="btn-primary" style={{ alignSelf: 'flex-start' }}>Our Full Story</Link>
         </div>
         <div className="welcome-media">
-          <PhotoPlaceholder caption="Campus Life Photo" />
+          <img src={schoolImage1} alt="Campus Life Photo" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
           <div className="welcome-accent">
             <div className="welcome-quote">"The purpose of education is to develop in students the skills, knowledge and values that will enable them to lead good lives and to contribute to a better world."</div>
             <div className="welcome-quote-attr">His Highness the Aga Khan</div>
@@ -157,7 +146,7 @@ export default function Home() {
         <div className="campus-inner">
           <div className="campus-gallery">
             <div className="campus-img">
-              <PhotoPlaceholder caption="Aerial Campus View" />
+              <img src={schoolImage2} alt="Aerial Campus View" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div className="campus-tag">Maputo Campus</div>
             </div>
             <div className="campus-img" style={{ height: 180 }}>

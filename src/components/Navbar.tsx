@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/images (1).png'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -13,23 +14,34 @@ export default function Navbar() {
   return (
     <nav className={scrolled ? 'scrolled' : ''}>
       <Link to="/" className="nav-logo">
-        <div className="nav-logo-emblem">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
+        <img src={logo} alt="Aga Khan Academy Logo" className="nav-logo-img" />
         <div className="nav-logo-text">
           Aga Khan Academy
           <span>Maputo · Mozambique</span>
         </div>
       </Link>
       <ul className="nav-links">
+        <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/academics" className="nav-link">Academics</Link></li>
+        <li><a href="#" className="nav-link">Achievements</a></li>
         <li><Link to="/campus" className="nav-link">Campus</Link></li>
-        <li><Link to="/student-life" className="nav-link">Student Life</Link></li>
+        <li className="nav-dropdown">
+          <a href="#" className="nav-link">Admissions</a>
+          <div className="nav-dropdown-menu">
+            <Link to="/apply">Enroll now</Link>
+            <a href="#">Fees for 2026</a>
+          </div>
+        </li>
+        <li><Link to="/student-life" className="nav-link">Activities</Link></li>
+        <li className="nav-dropdown">
+          <a href="#" className="nav-link">About</a>
+          <div className="nav-dropdown-menu">
+            <Link to="/about">Our Story</Link>
+            <Link to="/student-life">Student Life</Link>
+          </div>
+        </li>
+        <li><Link to="/contact" className="nav-link">Contact</Link></li>
         <li><Link to="/news" className="nav-link">News</Link></li>
-        <li><Link to="/about" className="nav-link">About</Link></li>
-        <li><Link to="/apply" className="nav-cta">Apply Now</Link></li>
       </ul>
     </nav>
   )

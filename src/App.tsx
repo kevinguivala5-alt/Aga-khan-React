@@ -6,6 +6,8 @@ import Campus from './pages/Campus'
 import StudentLife from './pages/StudentLife'
 import News from './pages/News'
 import Apply from './pages/Apply'
+import Contact from './pages/Contact'
+import ChatBot from './components/ChatBot'
 import './App.css'
 
 export default function App() {
@@ -19,7 +21,9 @@ export default function App() {
         <Route path="/student-life" element={<StudentLife />} />
         <Route path="/news" element={<News />} />
         <Route path="/apply" element={<Apply />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
+      <ChatBot />
     </BrowserRouter>
   )
 }
