@@ -49,15 +49,6 @@ export default function Contact() {
     <>
       <Navbar />
 
-      {/* HERO */}
-      <section className="pg-hero">
-        <div className="pg-hero-content">
-          <div className="pg-eyebrow">Get in Touch</div>
-          <h1 className="pg-h1">Contact<br/><em>AKA Maputo</em></h1>
-          <p className="pg-hero-sub">We'd love to hear from you. Whether you have questions about admissions, campus visits, or simply want to learn more about our community, our team is here to help.</p>
-        </div>
-      </section>
-
       {/* CONTACT GRID */}
       <section className="contact-grid pg-reveal">
         <div className="contact-main">
