@@ -505,3 +505,187 @@
   .ab-cta { padding: 80px 30px; }
   .ab-footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 30px; }
 }
+
+/* 768px - Tablets */
+@media (max-width: 768px) {
+  .ab-hero-left { padding: 80px 24px 48px; }
+  .ab-hero-tag { font-size: 9px; margin-bottom: 16px; }
+  .ab-hero-headline { font-size: clamp(32px, 5vw, 42px); margin-bottom: 20px; }
+  .ab-hero-subtitle { font-size: 13px; margin-bottom: 24px; }
+  .ab-hero-btn { padding: 12px 28px; font-size: 10px; }
+  .ab-hero-badge { bottom: 24px; left: 24px; padding: 12px 16px; }
+  .ab-badge-year { font-size: 18px; }
+  .ab-badge-text { font-size: 9px; }
+  .ab-story { padding: 60px 24px; gap: 32px; }
+  .ab-story-tag { font-size: 9px; }
+  .ab-story-heading { font-size: clamp(28px, 4vw, 36px); }
+  .ab-story-lead { font-size: 13px; }
+  .ab-story-chapters { gap: 28px; }
+  .ab-chapter-num { font-size: 9px; }
+  .ab-chapter-heading { font-size: 18px; }
+  .ab-chapter-body { font-size: 12px; }
+  .ab-story-aside { padding: 24px; }
+  .ab-story-quote { font-size: 14px; }
+  .ab-quote-author { font-size: 10px; }
+  .ab-timeline-section { padding: 60px 24px; }
+  .ab-timeline-header { font-size: clamp(28px, 4vw, 36px); margin-bottom: 48px; }
+  .ab-timeline { grid-template-columns: 1fr; gap: 20px; }
+  .ab-tl-year { font-size: 14px; }
+  .ab-tl-content { padding: 16px; }
+  .ab-tl-title { font-size: 13px; }
+  .ab-tl-body { font-size: 11px; }
+  .ab-mission { padding: 60px 24px; }
+  .ab-miss-title { font-size: clamp(28px, 4vw, 36px); margin-bottom: 16px; }
+  .ab-miss-body { font-size: 14px; }
+  .ab-miss-statement { font-size: 16px; padding: 24px 20px; }
+  .ab-miss-cards { grid-template-columns: 1fr; gap: 16px; }
+  .ab-miss-card { padding: 24px 20px; }
+  .ab-miss-card h3 { font-size: 14px; }
+  .ab-miss-card p { font-size: 12px; }
+  .ab-programmes { padding: 60px 24px; }
+  .ab-programmes-header h2 { font-size: clamp(28px, 4vw, 36px); }
+  .ab-programmes-header p { font-size: 13px; }
+  .ab-prog-item { padding: 28px 20px; }
+  .ab-prog-level { font-size: 10px; }
+  .ab-prog-name { font-size: 18px; }
+  .ab-prog-grades { font-size: 11px; }
+  .ab-prog-desc { font-size: 12px; }
+  .ab-prog-item ul li { font-size: 11px; }
+  .ab-values-left { padding: 48px 24px; }
+  .ab-values-tag { font-size: 9px; }
+  .ab-values-heading { font-size: clamp(28px, 4vw, 36px); }
+  .ab-values-intro { font-size: 13px; }
+  .ab-value-item { padding: 32px 24px; }
+  .ab-value-name { font-size: 14px; }
+  .ab-value-sub { font-size: 11px; }
+  .ab-cta { padding: 60px 24px; gap: 24px; }
+  .ab-cta-heading { font-size: clamp(28px, 4vw, 40px); }
+  .ab-cta p { font-size: 13px; }
+  .ab-btn { padding: 12px 28px; font-size: 10px; }
+  .ab-footer { padding: 32px 24px; gap: 12px; }
+  .ab-footer-logo { font-size: 12px; }
+  .ab-footer-copy, .ab-footer-location { font-size: 10px; }
+}
+
+/* 600px - Large phones */
+@media (max-width: 600px) {
+  .ab-hero-left { padding: 70px 16px 40px; }
+  .ab-hero-tag { font-size: 8px; margin-bottom: 12px; }
+  .ab-hero-headline { font-size: clamp(26px, 4.5vw, 34px); margin-bottom: 16px; line-height: 1.1; }
+  .ab-hero-subtitle { font-size: 12px; margin-bottom: 20px; }
+  .ab-hero-btn { padding: 10px 24px; font-size: 9px; }
+  .ab-hero-badge { bottom: 16px; left: 16px; padding: 10px 14px; }
+  .ab-badge-year { font-size: 16px; }
+  .ab-badge-text { font-size: 8px; }
+  .ab-hero-right { min-height: 40vh; }
+  .ab-story { padding: 48px 16px; gap: 28px; }
+  .ab-story-tag { font-size: 8px; }
+  .ab-story-heading { font-size: clamp(24px, 3.5vw, 30px); }
+  .ab-story-lead { font-size: 12px; }
+  .ab-story-chapters { gap: 24px; }
+  .ab-chapter-num { font-size: 8px; }
+  .ab-chapter-heading { font-size: 16px; }
+  .ab-chapter-body { font-size: 11px; }
+  .ab-story-aside { padding: 20px; }
+  .ab-story-quote { font-size: 13px; }
+  .ab-quote-author { font-size: 9px; }
+  .ab-timeline-section { padding: 48px 16px; }
+  .ab-timeline-header { font-size: clamp(24px, 3.5vw, 30px); margin-bottom: 40px; }
+  .ab-timeline { gap: 16px; }
+  .ab-tl-year { font-size: 13px; padding: 6px 10px; }
+  .ab-tl-content { padding: 14px; }
+  .ab-tl-title { font-size: 12px; }
+  .ab-tl-body { font-size: 10px; }
+  .ab-mission { padding: 48px 16px; }
+  .ab-miss-title { font-size: clamp(24px, 3.5vw, 30px); }
+  .ab-miss-body { font-size: 13px; }
+  .ab-miss-statement { font-size: 14px; padding: 20px 16px; margin: 32px 0; }
+  .ab-miss-cards { gap: 14px; }
+  .ab-miss-card { padding: 20px 16px; }
+  .ab-miss-card h3 { font-size: 13px; }
+  .ab-miss-card p { font-size: 11px; }
+  .ab-programmes { padding: 48px 16px; }
+  .ab-programmes-header h2 { font-size: clamp(24px, 3.5vw, 30px); }
+  .ab-programmes-header p { font-size: 12px; }
+  .ab-prog-item { padding: 24px 16px; }
+  .ab-prog-level { font-size: 9px; }
+  .ab-prog-name { font-size: 16px; }
+  .ab-prog-grades { font-size: 10px; }
+  .ab-prog-desc { font-size: 11px; }
+  .ab-prog-item ul { gap: 8px; }
+  .ab-prog-item ul li { font-size: 10px; }
+  .ab-values-left { padding: 40px 16px; }
+  .ab-values-tag { font-size: 8px; }
+  .ab-values-heading { font-size: clamp(24px, 3.5vw, 30px); }
+  .ab-values-intro { font-size: 12px; }
+  .ab-value-item { padding: 28px 16px; }
+  .ab-value-name { font-size: 13px; }
+  .ab-value-sub { font-size: 10px; }
+  .ab-cta { padding: 48px 16px; gap: 20px; }
+  .ab-cta-heading { font-size: clamp(24px, 3.5vw, 32px); }
+  .ab-cta p { font-size: 12px; }
+  .ab-cta-buttons { flex-direction: column; width: 100%; gap: 12px; }
+  .ab-btn { padding: 11px 24px; font-size: 9px; width: 100%; text-align: center; }
+  .ab-footer { padding: 28px 16px; gap: 10px; }
+  .ab-footer-logo { font-size: 11px; }
+  .ab-footer-copy, .ab-footer-location { font-size: 9px; }
+}
+
+/* 480px - Small phones */
+@media (max-width: 480px) {
+  .ab-hero-left { padding: 60px 12px 32px; }
+  .ab-hero-tag { font-size: 7px; margin-bottom: 10px; }
+  .ab-hero-headline { font-size: clamp(22px, 4vw, 28px); margin-bottom: 12px; }
+  .ab-hero-subtitle { font-size: 11px; margin-bottom: 16px; line-height: 1.6; }
+  .ab-hero-btn { padding: 9px 20px; font-size: 9px; }
+  .ab-hero-badge { bottom: 12px; left: 12px; padding: 8px 12px; }
+  .ab-badge-year { font-size: 14px; }
+  .ab-badge-text { font-size: 7px; }
+  .ab-hero-right { min-height: 35vh; }
+  .ab-story { padding: 36px 12px; gap: 24px; }
+  .ab-story-tag { font-size: 7px; }
+  .ab-story-heading { font-size: clamp(20px, 3vw, 26px); }
+  .ab-story-lead { font-size: 11px; }
+  .ab-chapter-heading { font-size: 14px; }
+  .ab-chapter-body { font-size: 10px; line-height: 1.7; }
+  .ab-story-aside { padding: 16px; }
+  .ab-story-quote { font-size: 12px; }
+  .ab-quote-author { font-size: 8px; }
+  .ab-timeline-section { padding: 36px 12px; }
+  .ab-timeline-header { font-size: clamp(20px, 3vw, 26px); margin-bottom: 32px; }
+  .ab-timeline { gap: 12px; }
+  .ab-tl-year { font-size: 12px; padding: 5px 8px; }
+  .ab-tl-content { padding: 12px; }
+  .ab-tl-title { font-size: 11px; }
+  .ab-tl-body { font-size: 9px; line-height: 1.6; }
+  .ab-mission { padding: 36px 12px; }
+  .ab-miss-title { font-size: clamp(20px, 3vw, 26px); }
+  .ab-miss-body { font-size: 12px; }
+  .ab-miss-statement { font-size: 12px; padding: 16px 12px; margin: 24px 0; }
+  .ab-miss-card { padding: 16px 12px; }
+  .ab-miss-card h3 { font-size: 12px; }
+  .ab-miss-card p { font-size: 10px; }
+  .ab-programmes { padding: 36px 12px; }
+  .ab-programmes-header h2 { font-size: clamp(20px, 3vw, 26px); }
+  .ab-programmes-header p { font-size: 11px; }
+  .ab-prog-item { padding: 20px 12px; }
+  .ab-prog-level { font-size: 8px; }
+  .ab-prog-name { font-size: 14px; }
+  .ab-prog-grades { font-size: 9px; }
+  .ab-prog-desc { font-size: 10px; }
+  .ab-prog-item ul li { font-size: 9px; }
+  .ab-values-left { padding: 32px 12px; }
+  .ab-values-tag { font-size: 7px; }
+  .ab-values-heading { font-size: clamp(20px, 3vw, 26px); }
+  .ab-values-intro { font-size: 11px; }
+  .ab-value-item { padding: 24px 12px; }
+  .ab-value-name { font-size: 12px; }
+  .ab-value-sub { font-size: 9px; }
+  .ab-cta { padding: 36px 12px; gap: 16px; }
+  .ab-cta-heading { font-size: clamp(20px, 3vw, 26px); }
+  .ab-cta p { font-size: 11px; }
+  .ab-btn { padding: 10px 20px; font-size: 9px; }
+  .ab-footer { padding: 24px 12px; }
+  .ab-footer-logo { font-size: 10px; }
+  .ab-footer-copy, .ab-footer-location { font-size: 8px; }
+}
