@@ -741,61 +741,6 @@
   .pg-ticker { padding: 8px 0; }
   .pg-ticker-item { font-size: 9px; padding: 0 16px; }
 }
-  .pg-hero-content { padding: 0 40px 72px; }
-  .pg-hero-stats { right: 40px; bottom: 72px; gap: 28px; }
-  .ac-prog-inner, .ac-prog-inner.reverse { grid-template-columns: 1fr; }
-  .ac-subjects-grid { grid-template-columns: repeat(3, 1fr); }
-  .ac-subjects-header, .ac-destinations { padding: 60px 40px; }
-  .ac-prog-section { padding: 60px 40px; }
-  .ac-stats-band { grid-template-columns: 1fr 1fr; padding: 60px 40px; }
-  .ac-cta { padding: 60px 40px; flex-direction: column; }
-  .ca-facts { grid-template-columns: 1fr 1fr; padding: 0 40px; }
-  .ca-facility { padding: 60px 40px; }
-  .ca-fac-inner, .ca-fac-inner.reverse { grid-template-columns: 1fr; }
-  .ca-fac-inner.reverse .ca-fac-img { order: 0; }
-  .ca-sports { padding: 60px 40px; }
-  .ca-sports-inner { grid-template-columns: 1fr; }
-  .ca-sustainability { padding: 60px 40px; grid-template-columns: 1fr; }
-  .ca-location { padding: 60px 40px; }
-  .ca-loc-inner { grid-template-columns: 1fr; }
-  .sl-statsbar { grid-template-columns: 1fr 1fr; padding: 0 40px; }
-  .sl-intro { grid-template-columns: 1fr; padding: 60px 40px; }
-  .sl-activities { padding: 60px 40px; }
-  .sl-act-grid { grid-template-columns: 1fr 1fr; }
-  .sl-sports { padding: 60px 40px; }
-  .sl-sport-cards { grid-template-columns: 1fr; }
-  .sl-arts { padding: 60px 40px; }
-  .sl-arts-inner { grid-template-columns: 1fr; }
-  .sl-service { padding: 60px 40px; }
-  .sl-service-inner { grid-template-columns: 1fr; }
-  .sl-cas-cards { grid-template-columns: 1fr; }
-  .sl-leadership { grid-template-columns: 1fr; padding: 0; }
-  .nw-masthead { padding: 72px 40px 0; }
-  .nw-mast-top { padding: 60px 0 40px; flex-direction: column; align-items: flex-start; gap: 20px; }
-  .nw-featured { padding: 0 40px; }
-  .nw-feat-inner { grid-template-columns: 1fr; }
-  .nw-feat-content { padding: 32px 0 0; }
-  .nw-grid { padding: 60px 40px; }
-  .nw-articles { grid-template-columns: 1fr; }
-  .nw-more { padding: 60px 40px; }
-  .nw-newsletter { padding: 60px 40px; grid-template-columns: 1fr; }
-  .ap-intro { padding: 60px 40px; grid-template-columns: 1fr; }
-  .ap-steps { padding: 60px 40px; }
-  .ap-steps-grid { grid-template-columns: 1fr 1fr; }
-  .ap-cards { padding: 60px 40px; }
-  .ap-cards-grid { grid-template-columns: 1fr; }
-  .ap-cta-band { padding: 60px 40px; flex-direction: column; }
-  .ac-philosophy { padding: 40px; gap: 40px; }
-  .ap-tabbar { padding: 0 40px; }
-  .ap-form-wrap { padding: 40px 24px 64px; }
-  .ap-fsection { padding: 32px 24px 24px; }
-  .ap-frow, .ap-frow-3 { grid-template-columns: 1fr; }
-  .ap-form-footer { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
-  .ap-fees-header { padding: 48px 40px 32px; }
-  .ap-fee-cards { grid-template-columns: 1fr; padding: 40px; }
-  .ap-fee-info { grid-template-columns: 1fr; }
-  .ap-fee-info-card { padding: 28px 32px; }
-}
 
 /* 768px - Tablets */
 @media (max-width: 768px) {
