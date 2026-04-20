@@ -688,6 +688,58 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
+  .pg-hero { min-height: 80vh; }
+  .pg-hero-content { padding: 0 40px 60px; max-width: 100%; }
+  .pg-hero-stats { right: 40px; bottom: 60px; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .pg-hero { min-height: 70vh; }
+  .pg-hero-content { padding: 0 24px 40px; }
+  .pg-h1 { font-size: clamp(32px, 5vw, 40px); margin-bottom: 20px; }
+  .pg-h2 { font-size: clamp(24px, 4vw, 32px); }
+  .pg-eyebrow { font-size: 9px; margin-bottom: 12px; }
+  .pg-tag { font-size: 8px; margin-bottom: 32px; }
+  .pg-hero-sub { font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+  .pg-body { font-size: 13px; }
+  .pg-btn { padding: 11px 24px; font-size: 11px; }
+  .pg-hero-stats { flex-direction: column; right: 24px; bottom: 40px; gap: 24px; }
+  .pg-stat-num { font-size: 28px; }
+  .pg-stat-label { font-size: 9px; }
+}
+
+@media (max-width: 600px) {
+  .pg-hero { min-height: 60vh; padding-top: 60px; }
+  .pg-hero-content { padding: 0 16px 32px; }
+  .pg-h1 { font-size: clamp(26px, 4.5vw, 32px); margin-bottom: 16px; }
+  .pg-h2 { font-size: clamp(20px, 3.5vw, 26px); line-height: 1.2; }
+  .pg-eyebrow { font-size: 8px; margin-bottom: 8px; }
+  .pg-eyebrow::before { width: 20px; }
+  .pg-tag { font-size: 7px; margin-bottom: 24px; }
+  .pg-tag::after { max-width: 32px; }
+  .pg-hero-sub { font-size: 13px; max-width: 100%; }
+  .pg-body { font-size: 12px; }
+  .pg-btn { padding: 10px 20px; font-size: 10px; border-radius: 4px; }
+  .pg-hero-stats { right: 16px; bottom: 32px; gap: 16px; }
+  .pg-stat-num { font-size: 24px; }
+  .pg-stat-num em { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .pg-hero { min-height: 50vh; padding-top: 56px; }
+  .pg-hero-content { padding: 0 12px 24px; }
+  .pg-h1 { font-size: clamp(22px, 4vw, 26px); margin-bottom: 12px; line-height: 1.1; }
+  .pg-h2 { font-size: clamp(18px, 3vw, 22px); }
+  .pg-tag { font-size: 6px; margin-bottom: 16px; }
+  .pg-hero-sub { font-size: 12px; line-height: 1.5; margin-bottom: 16px; }
+  .pg-body { font-size: 11px; line-height: 1.7; }
+  .pg-btn { padding: 9px 16px; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; }
+  .pg-hero-stats { right: 10px; bottom: 24px; gap: 8px; }
+  .pg-stat-num { font-size: 20px; }
+  .pg-stat-num em { font-size: 12px; }
+  .pg-ticker { padding: 8px 0; }
+  .pg-ticker-item { font-size: 9px; padding: 0 16px; }
+}
   .pg-hero-content { padding: 0 40px 72px; }
   .pg-hero-stats { right: 40px; bottom: 72px; gap: 28px; }
   .ac-prog-inner, .ac-prog-inner.reverse { grid-template-columns: 1fr; }
@@ -1052,17 +1104,75 @@
 
 .contact-dept-item svg { width: 16px; height: 16px; }
 
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; padding: 32px 20px; }
+  .contact-form-section { padding: 24px 20px; }
+  .contact-form-title { font-size: 22px; }
+  .form-group { gap: 6px; }
+  .form-group label { font-size: 12px; }
+  .form-group input, .form-group textarea, .form-group select { font-size: 14px; }
+  .contact-btn { font-size: 12px; }
+  .contact-info { padding: 24px 20px; gap: 40px; }
+  .contact-info-title { font-size: 22px; }
+  .contact-info-item p { font-size: 13px; }
+  .contact-map { height: 300px; }
+  .contact-map-full { padding: 32px 20px; }
+  .contact-map-header { margin-bottom: 24px; }
+}
+
+@media (max-width: 600px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; padding: 24px 16px; }
+  .contact-main { gap: 32px; }
+  .contact-form-section { padding: 20px 16px; }
+  .contact-form-title { font-size: 20px; margin-bottom: 16px; }
+  .form-group label { font-size: 11px; }
+  .form-group input, .form-group textarea, .form-group select { font-size: 13px; padding: 10px 12px; }
+  .contact-info { position: static; padding: 20px 16px; gap: 32px; }
+  .contact-info-title { font-size: 20px; }
+  .contact-info-item { gap: 12px; }
+  .contact-info-icon { width: 40px; height: 40px; }
+  .contact-info-icon svg { width: 18px; height: 18px; }
+  .contact-info-item h3 { font-size: 12px; }
+  .contact-info-item p { font-size: 12px; }
+  .contact-map { height: 250px; }
+  .contact-map-full { padding: 24px 16px; }
+  .contact-map-header .pg-h2 { font-size: 22px; }
+  .contact-map-header p { font-size: 14px; }
+}
+
 @media (max-width: 480px) {
   .cb-panel { width: calc(100vw - 32px); right: 16px; bottom: 88px; }
   .cb-fab { right: 16px; bottom: 16px; }
-  .contact-grid {
-    grid-template-columns: 1fr; gap: 40px; padding: 40px 20px;
-  }
-  .contact-form-section { padding: 32px 20px; }
-  .contact-info { position: static; padding: 32px 20px; }
-  .contact-map { height: 300px; }
-  .contact-map-full { padding: 40px 20px; }
-  .contact-map-header { margin-bottom: 32px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 16px; padding: 16px 12px; }
+  .contact-main { gap: 24px; }
+  .contact-form-section { padding: 16px 12px; background: var(--g50); border-radius: 8px; }
+  .pg-tag { margin-bottom: 16px; }
+  .contact-form-title { font-size: 18px; margin-bottom: 12px; }
+  .form-group { gap: 4px; }
+  .form-group label { font-size: 10px; }
+  .form-group input, .form-group textarea, .form-group select { font-size: 12px; padding: 9px 10px; border-radius: 4px; }
+  .form-group textarea { min-height: 100px; }
+  .contact-btn { padding: 10px 16px; font-size: 10px; margin-top: 4px; }
+  .contact-success { padding: 10px 12px; font-size: 11px; }
+  .contact-info { position: static; padding: 16px 12px; gap: 24px; background: var(--g800); border-radius: 8px; }
+  .contact-info-title { font-size: 18px; }
+  .contact-info-items { gap: 20px; }
+  .contact-info-item { gap: 10px; }
+  .contact-info-icon { width: 36px; height: 36px; }
+  .contact-info-icon svg { width: 16px; height: 16px; }
+  .contact-info-item h3 { font-size: 11px; margin-bottom: 4px; }
+  .contact-info-item p { font-size: 11px; line-height: 1.5; }
+  .contact-info-item a { font-size: 11px; }
+  .text-small { font-size: 10px; }
+  .contact-departments { margin-top: 16px; padding-top: 16px; }
+  .contact-departments h3 { font-size: 10px; margin-bottom: 12px; }
+  .contact-dept-item { padding: 9px 10px; font-size: 11px; }
+  .contact-dept-item svg { width: 14px; height: 14px; }
+  .contact-map { height: 220px; border-radius: 6px; }
+  .contact-map-full { padding: 16px 12px; }
+  .contact-map-header { margin-bottom: 12px; }
+  .contact-map-header .pg-h2 { font-size: 20px; margin-bottom: 8px; }
+  .contact-map-header p { font-size: 12px; }
 }
 
 /* ════════════════════════════════════════════════

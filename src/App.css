@@ -29,7 +29,10 @@
 
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
-
+@media (max-width: 768px) {
+  html { scroll-behavior: auto; }
+  body { overflow-x: hidden; }
+}
 /* ─── NAVBAR ─── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -319,4 +322,111 @@ footer { background: var(--warm-white); padding: 80px 80px 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .ib-stripe { padding: 16px 40px; }
   .announce { padding: 10px 24px; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 16px; height: 64px; }
+  .nav-logo-img { width: 40px; height: 40px; }
+  .nav-logo-text { font-size: 13px; }
+  .nav-logo-text span { font-size: 9px; }
+  .hero-content { padding: 0 24px 60px; }
+  .hero-title { font-size: clamp(36px, 6vw, 48px); }
+  .hero-subtitle { font-size: 14px; }
+  .hero-stats { right: 24px; bottom: 60px; gap: 16px; }
+  .hero-stat-num { font-size: 24px; }
+  .welcome { grid-template-columns: 1fr; }
+  .welcome-text { padding: 48px 24px; }
+  .welcome-visual { margin-top: 32px; }
+  .programmes { padding: 48px 24px; }
+  .prog-cards { grid-template-columns: 1fr; }
+  .campus { padding: 48px 24px; }
+  .student-life { padding: 48px 24px; }
+  .sl-grid { grid-template-columns: 1fr; }
+  .news { padding: 48px 24px; }
+  .news-grid { grid-template-columns: 1fr; }
+  .admissions-cta { padding: 48px 24px; }
+  .testimonials { padding: 48px 24px; }
+  .test-track { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px 32px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ib-stripe { padding: 12px 24px; font-size: 9px; }
+  .announce { padding: 8px 16px; font-size: 11px; }
+}
+
+@media (max-width: 600px) {
+  nav { height: 60px; padding: 0 12px; }
+  .nav-logo { gap: 8px; }
+  .nav-logo-img { width: 36px; height: 36px; }
+  .nav-logo-text { font-size: 12px; }
+  .nav-logo-text span { font-size: 8px; }
+  .hero { min-height: 80vh; }
+  .hero-content { padding: 0 16px 40px; }
+  .hero-title { font-size: clamp(28px, 5vw, 36px); line-height: 1.1; }
+  .hero-subtitle { font-size: 13px; line-height: 1.6; }
+  .hero-eyebrow { font-size: 9px; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+  .hero-stats { flex-direction: column; right: 16px; bottom: 40px; gap: 12px; }
+  .hero-stat-num { font-size: 20px; }
+  .hero-stat-label { font-size: 9px; }
+  .welcome-text { padding: 32px 16px; }
+  .welcome-text h2 { font-size: 24px; }
+  .welcome-text p { font-size: 13px; }
+  .programmes { padding: 32px 16px; }
+  .programmes h2 { font-size: 22px; }
+  .prog-cards { gap: 12px; }
+  .campus { padding: 32px 16px; }
+  .campus h2 { font-size: 22px; }
+  .student-life { padding: 32px 16px; }
+  .student-life h2 { font-size: 22px; }
+  .news { padding: 32px 16px; }
+  .news h2 { font-size: 22px; }
+  .admissions-cta { padding: 32px 16px; gap: 24px; }
+  .testimonials { padding: 32px 16px; }
+  .test-track { gap: 16px; }
+  .test-card { padding: 24px 16px; }
+  .test-quote-mark { font-size: 48px; }
+  .test-body { font-size: 15px; }
+  footer { padding: 40px 16px 24px; }
+  .footer-grid { gap: 24px; padding-bottom: 24px; }
+  .footer-logo-img { width: 40px; height: 40px; }
+  .footer-logo-text { font-size: 14px; }
+  .footer-desc { font-size: 12px; }
+  .footer-col h5 { font-size: 10px; }
+  .footer-links a { font-size: 12px; }
+  .ib-stripe { padding: 8px 16px; }
+  .ib-badges { flex-direction: column; gap: 8px; }
+  .ib-badge { font-size: 10px; padding: 6px 12px; }
+}
+
+@media (max-width: 480px) {
+  nav { height: 56px; padding: 0 10px; }
+  .nav-logo-img { width: 32px; height: 32px; }
+  .nav-logo-text { font-size: 11px; }
+  .hero-content { padding: 0 12px 32px; }
+  .hero-title { font-size: clamp(24px, 4.5vw, 28px); }
+  .hero-subtitle { font-size: 12px; }
+  .hero-actions { gap: 8px; }
+  .btn-primary, .btn-ghost { padding: 11px 20px; font-size: 11px; }
+  .hero-stats { right: 12px; bottom: 32px; gap: 8px; }
+  .hero-stat-num { font-size: 18px; }
+  .scroll-indicator { font-size: 10px; }
+  .welcome-text { padding: 24px 12px; }
+  .welcome-text h2 { font-size: 20px; margin-bottom: 12px; }
+  .programmes { padding: 24px 12px; }
+  .programmes h2 { font-size: 20px; }
+  .campus { padding: 24px 12px; }
+  .student-life { padding: 24px 12px; }
+  .news { padding: 24px 12px; }
+  .admissions-cta { padding: 24px 12px; }
+  .admissions-cta h2 { font-size: 20px; }
+  .testimonials { padding: 24px 12px; }
+  .test-card { padding: 20px 14px; }
+  .test-body { font-size: 14px; }
+  footer { padding: 32px 12px 20px; }
+  .footer-logo-text { font-size: 13px; }
+  .footer-desc { font-size: 11px; }
+  .footer-links { gap: 8px; }
+  .footer-links a { font-size: 11px; }
+  .ib-stripe { padding: 6px 12px; }
 }
