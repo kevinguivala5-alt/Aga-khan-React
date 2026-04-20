@@ -23,7 +23,7 @@ export default function Navbar() {
       <ul className="nav-links">
         <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/academics" className="nav-link">Academics</Link></li>
-        <li><a href="#" className="nav-link">Achievements</a></li>
+        <li><Link to="/achievements" className="nav-link">Achievements</Link></li>
         <li><Link to="/campus" className="nav-link">Campus</Link></li>
         <li className="nav-dropdown">
           <a href="#" className="nav-link">Admissions</a>

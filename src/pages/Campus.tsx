@@ -68,20 +68,6 @@ export default function Campus() {
       <section className="pg-hero">
         <div className="pg-hero-bg-grid" />
         <div className="pg-hero-accent" />
-        <div className="pg-hero-content">
-          <div className="pg-eyebrow">Maputo, Mozambique · Est. 2013</div>
-          <h1 className="pg-h1">Designed for<br/><em>discovery</em>,<br/>built for life</h1>
-          <p className="pg-hero-sub">A purpose-built campus in the heart of Maputo — every space considered, every facility aligned to the demands of a full IB education and a vibrant residential community.</p>
-          <div style={{ display: 'flex', gap: 16 }}>
-            <a href="#facilities" className="pg-btn pg-btn-green">Explore Facilities</a>
-            <a href="/apply" className="pg-btn pg-btn-outline-white">Book a Tour</a>
-          </div>
-        </div>
-        <div className="pg-hero-stats">
-          <div><div className="pg-stat-num">5<em>ha</em></div><div className="pg-stat-label">Campus Area</div></div>
-          <div><div className="pg-stat-num">14<em>+</em></div><div className="pg-stat-label">Classrooms</div></div>
-          <div><div className="pg-stat-num">200<em>+</em></div><div className="pg-stat-label">Boarding Places</div></div>
-        </div>
       </section>
 
       <div className="pg-ticker">
