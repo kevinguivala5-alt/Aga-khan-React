@@ -76,18 +76,6 @@ const subjects = [
   { area: 'Other', name: 'Computer Sci.' },
 ]
 
-const destinations = [
-  { name: 'University College London', country: 'United Kingdom', year: '2025' },
-  { name: 'University of Toronto', country: 'Canada', year: '2025' },
-  { name: 'Sciences Po Paris', country: 'France', year: '2025' },
-  { name: 'University of Cape Town', country: 'South Africa', year: '2025' },
-  { name: 'Delft University of Technology', country: 'Netherlands', year: '2024' },
-  { name: "King's College London", country: 'United Kingdom', year: '2024' },
-  { name: 'University of Amsterdam', country: 'Netherlands', year: '2024' },
-  { name: 'Aga Khan University', country: 'Pakistan / Kenya', year: '2024' },
-  { name: 'McGill University', country: 'Canada', year: '2023' },
-]
-
 export default function Academics() {
   useEffect(() => {
     window.scrollTo(0, 0)
