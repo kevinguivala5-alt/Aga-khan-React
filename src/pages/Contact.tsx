@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SectionsHeader from '../components/SectionsHeader'
 import '../pages.css'
 
 type FormState = {
@@ -48,6 +49,10 @@ export default function Contact() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="Contact" 
+        description="Get in touch with our admissions and administrative teams. We are here to answer your questions and help you find your place in our community." 
+      />
 
       {/* CONTACT GRID */}
       <section className="contact-grid pg-reveal">

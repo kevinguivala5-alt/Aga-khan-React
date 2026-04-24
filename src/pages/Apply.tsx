@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SectionsHeader from '../components/SectionsHeader'
+import { EntryIcon, FeesIcon, GlobalIcon, ScholarshipIcon, PaymentIcon, BoardingIcon, ContactIcon } from '../components/Icons'
 import '../pages.css'
 
 const steps = [
@@ -8,49 +10,6 @@ const steps = [
   { num: '02', title: 'Apply', body: 'Complete the online application form and submit all required documents — academic records, recommendations, passport copy and birth certificate.' },
   { num: '03', title: 'Assessment', body: 'Shortlisted applicants are invited to sit an entrance assessment in English, Mathematics and reasoning, followed by a family interview with our Admissions team.' },
   { num: '04', title: 'Enrol', body: 'Successful applicants receive a formal offer. A non-refundable enrolment fee secures your place. Our team guides you through boarding, uniform and orientation.' },
-]
-
-const feeData = [
-  {
-    level: 'Kindergarten',
-    tag: 'Early Years · Pre-K – Grade 2',
-    color: '#2B5F3E',
-    light: '#EAF3ED',
-    items: [
-      { label: 'Annual Tuition', amount: 'USD 7,800' },
-      { label: 'Registration Fee', amount: 'USD 500' },
-      { label: 'Activity & Resources Fee', amount: 'USD 650' },
-      { label: 'Books & Materials', amount: 'USD 380' },
-    ],
-    note: 'Includes Early Years care programme, supervised activities and daily snacks.',
-  },
-  {
-    level: 'Primary School',
-    tag: 'IB PYP · Grades 3 – 5',
-    color: '#1A3D27',
-    light: '#E4EFE8',
-    items: [
-      { label: 'Annual Tuition', amount: 'USD 10,400' },
-      { label: 'Registration Fee', amount: 'USD 500' },
-      { label: 'Activity & Resources Fee', amount: 'USD 820' },
-      { label: 'Books & Materials', amount: 'USD 560' },
-    ],
-    note: 'Includes PYP Exhibition preparation, science lab access and co-curricular participation.',
-  },
-  {
-    level: 'High School',
-    tag: 'IB MYP & DP · Grades 6 – 12',
-    color: '#0F2819',
-    light: '#DDE8E1',
-    items: [
-      { label: 'Annual Tuition', amount: 'USD 14,200' },
-      { label: 'Registration Fee', amount: 'USD 500' },
-      { label: 'Activity & Resources Fee', amount: 'USD 1,050' },
-      { label: 'Books & Materials', amount: 'USD 780' },
-      { label: 'IB Exam Fee (DP only)', amount: 'USD 1,300' },
-    ],
-    note: 'Boarding fees are separate. Financial assistance available for qualifying families.',
-  },
 ]
 
 const grades = ['Kindergarten', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5',
@@ -75,7 +34,7 @@ const emptyForm: FormState = {
 }
 
 export default function Apply() {
-  const [tab, setTab] = useState<'how' | 'enroll' | 'fees'>('how')
+  const [tab, setTab] = useState<'how' | 'enroll'>('how')
   const [form, setForm] = useState<FormState>(emptyForm)
   const [submitted, setSubmitted] = useState(false)
 
@@ -101,8 +60,14 @@ export default function Apply() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="Admissions" 
+        description="Join our community of learners committed to academic excellence, ethical leadership and global citizenship. We welcome applications from families who share our values."
+        subtitle="Begin your journey at AKA Maputo"
+        subtext="We welcome applications from families who share our commitment to academic excellence, ethical leadership and the values of the International Baccalaureate."
+      />
 
-      <section className="pg-hero ap-hero">
+      <section className="pg-hero ap-hero" style={{ display: 'none' }}>
         <div className="pg-hero-bg-grid" />
         <div className="pg-hero-accent" />
         <div className="pg-hero-content">
@@ -111,7 +76,6 @@ export default function Apply() {
           <p className="pg-hero-sub">We welcome applications from families who share our commitment to academic excellence, ethical leadership and the values of the International Baccalaureate.</p>
           <div style={{ display: 'flex', gap: 16 }}>
             <button className="pg-btn pg-btn-green" onClick={() => setTab('enroll')} style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>Enroll Now</button>
-            <button className="pg-btn pg-btn-outline-white" onClick={() => setTab('fees')} style={{ border: '1.5px solid rgba(255,255,255,0.5)', background: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>View Fees</button>
           </div>
         </div>
         <div className="pg-hero-stats">
@@ -123,7 +87,7 @@ export default function Apply() {
 
       {/* TAB BAR */}
       <div className="ap-tabbar">
-        {([['how', 'How to Apply'], ['enroll', 'Enroll Now'], ['fees', 'School Fees']] as const).map(([key, label]) => (
+        {([['how', 'How to Apply'], ['enroll', 'Enroll Now']] as const).map(([key, label]) => (
           <button
             key={key}
             className={`ap-tab${tab === key ? ' active' : ''}`}
@@ -166,16 +130,82 @@ export default function Apply() {
             <h2 className="pg-h2" style={{ marginTop: 8 }}>Everything you<br/>need to <em>know</em></h2>
             <div className="ap-cards-grid">
               {[
-                { icon: '📋', title: 'Entry Points', body: 'We welcome applications at all year group entry points — from Early Years through to Grade 11. Mid-year applications are considered subject to availability.' },
-                { icon: '💰', title: 'Fees & Financial Aid', body: 'Need-based financial assistance is awarded annually and covers up to 100% of fees for qualifying families. See the Fees tab for full details.' },
-                { icon: '🌍', title: 'International Students', body: 'Students from over 40 nationalities study at AKA Maputo. We support visa applications, travel arrangements and cultural orientation.' },
-              ].map((c, i) => (
-                <div className="ap-card" key={i}>
-                  <div className="ap-card-icon">{c.icon}</div>
-                  <div className="ap-card-title">{c.title}</div>
-                  <div className="ap-card-body">{c.body}</div>
-                </div>
-              ))}
+                { Icon: EntryIcon, title: 'Entry Points', body: 'We welcome applications at all year group entry points — from Early Years through to Grade 11. Mid-year applications are considered subject to availability.' },
+                { Icon: FeesIcon, title: 'Fees & Financial Aid', body: 'Need-based financial assistance is awarded annually and covers up to 100% of fees for qualifying families. See the fees section below for full details.' },
+                { Icon: GlobalIcon, title: 'International Students', body: 'Students from over 40 nationalities study at AKA Maputo. We support visa applications, travel arrangements and cultural orientation.' },
+              ].map((c, i) => {
+                const IconComponent = c.Icon;
+                return (
+                  <div className="ap-card" key={i}>
+                    <div className="ap-card-icon"><IconComponent style={{ width: '28px', height: '28px' }} /></div>
+                    <div className="ap-card-title">{c.title}</div>
+                    <div className="ap-card-body">{c.body}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="ap-fees-section pg-reveal">
+            <div className="pg-tag">2026–27 Academic Year</div>
+            <h2 className="pg-h2" style={{ marginTop: 8 }}>School <em>Fees</em></h2>
+            <p style={{ fontSize: 14, color: 'var(--g500)', marginTop: 16, maxWidth: 600, lineHeight: 1.8, marginBottom: 32 }}>All fees are quoted in US Dollars and cover one academic year. Financial assistance is available for qualifying families — contact our Admissions Office for details.</p>
+            
+            <table className="ap-fees-table">
+              <thead>
+                <tr>
+                  <th>School Division</th>
+                  <th>Year Group</th>
+                  <th>Annual Tuition</th>
+                  <th>Registration Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Early Years</td>
+                  <td>Pre-K – Grade 2</td>
+                  <td>USD 7,800</td>
+                  <td>USD 500</td>
+                </tr>
+                <tr>
+                  <td>Primary School</td>
+                  <td>Grades 3 – 5</td>
+                  <td>USD 10,400</td>
+                  <td>USD 500</td>
+                </tr>
+                <tr>
+                  <td>Middle School</td>
+                  <td>Grades 6 – 8</td>
+                  <td>USD 12,300</td>
+                  <td>USD 500</td>
+                </tr>
+                <tr>
+                  <td>High School</td>
+                  <td>Grades 9 – 12</td>
+                  <td>USD 14,200</td>
+                  <td>USD 500</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="ap-fee-info" style={{ marginTop: 48 }}>
+              {[
+                { Icon: ScholarshipIcon, title: 'Financial Assistance', body: 'Need-based bursaries cover up to 100% of tuition fees. Applications are assessed annually and renewed each year subject to continued eligibility.' },
+                { Icon: PaymentIcon, title: 'Payment Plans', body: 'Fees may be paid termly or annually. A 2% discount applies for full annual payment made before the first day of term.' },
+                { Icon: BoardingIcon, title: 'Boarding Fees', body: 'Residential boarding fees are quoted separately. All-inclusive boarding packages cover accommodation, meals and houseparent supervision.' },
+                { Icon: ContactIcon, title: 'Contact Admissions', body: 'For a detailed fee schedule or to discuss financial assistance, contact admissions@akamaputo.org or call +258 00 000 000.' },
+              ].map((item, i) => {
+                const IconComponent = item.Icon;
+                return (
+                  <div className="ap-fee-info-card" key={i}>
+                    <div className="ap-fee-info-icon"><IconComponent style={{ width: '24px', height: '24px' }} /></div>
+                    <div>
+                      <div className="ap-fee-info-title">{item.title}</div>
+                      <div className="ap-fee-info-body">{item.body}</div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -351,58 +381,6 @@ export default function Apply() {
               </div>
             </form>
           )}
-        </div>
-      )}
-
-      {/* ── FEES ── */}
-      {tab === 'fees' && (
-        <div className="ap-fees-wrap">
-          <div className="ap-fees-header pg-reveal">
-            <div className="pg-tag">2026–27 Academic Year</div>
-            <h2 className="pg-h2" style={{ marginTop: 8 }}>School <em>Fees</em></h2>
-            <p style={{ fontSize: 14, color: 'var(--g500)', marginTop: 16, maxWidth: 600, lineHeight: 1.8 }}>All fees are quoted in US Dollars and cover one academic year. Financial assistance is available for qualifying families — contact our Admissions Office for details.</p>
-          </div>
-
-          <div className="ap-fee-cards pg-reveal">
-            {feeData.map((f, i) => (
-              <div className="ap-fee-card" key={i} style={{ '--fee-color': f.color, '--fee-light': f.light } as React.CSSProperties}>
-                <div className="ap-fee-top">
-                  <div className="ap-fee-tag">{f.tag}</div>
-                  <div className="ap-fee-level">{f.level}</div>
-                </div>
-                <div className="ap-fee-rows">
-                  {f.items.map((item, j) => (
-                    <div className={`ap-fee-row${j === 0 ? ' primary' : ''}`} key={j}>
-                      <span className="ap-fee-row-label">{item.label}</span>
-                      <span className="ap-fee-row-amt">{item.amount}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="ap-fee-total">
-                  <span>Total (excl. IB exam)</span>
-                  <span>{`USD ${f.items.filter(x => !x.label.includes('IB Exam')).reduce((acc, x) => acc + parseInt(x.amount.replace(/[^0-9]/g, '')), 0).toLocaleString()}`}</span>
-                </div>
-                <div className="ap-fee-note">{f.note}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="ap-fee-info pg-reveal">
-            {[
-              { icon: '🎓', title: 'Financial Assistance', body: 'Need-based bursaries cover up to 100% of tuition fees. Applications are assessed annually and renewed each year subject to continued eligibility.' },
-              { icon: '📅', title: 'Payment Plans', body: 'Fees may be paid termly or annually. A 2% discount applies for full annual payment made before the first day of term.' },
-              { icon: '✈️', title: 'Boarding Fees', body: 'Residential boarding fees are quoted separately. All-inclusive boarding packages cover accommodation, meals and houseparent supervision.' },
-              { icon: '📞', title: 'Contact Admissions', body: 'For a detailed fee schedule or to discuss financial assistance, contact admissions@akamaputo.org or call +258 00 000 000.' },
-            ].map((item, i) => (
-              <div className="ap-fee-info-card" key={i}>
-                <div className="ap-fee-info-icon">{item.icon}</div>
-                <div>
-                  <div className="ap-fee-info-title">{item.title}</div>
-                  <div className="ap-fee-info-body">{item.body}</div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       )}
 

@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SectionsHeader from '../components/SectionsHeader'
+import { MunIcon, DramaIcon, MusicIcon, ScienceIcon, MagazineIcon, EcoIcon, CodingIcon, CouncilIcon } from '../components/Icons'
 import '../pages.css'
 
 const Photo = ({ caption, bg }: { caption: string; bg?: string }) => (
@@ -15,14 +17,14 @@ const Photo = ({ caption, bg }: { caption: string; bg?: string }) => (
 )
 
 const activities = [
-  { icon: '🌍', name: 'Model United Nations', tag: 'Leadership', desc: 'Annual MUN conferences hosted at AKA Maputo draw delegates from across Mozambique and the region.' },
-  { icon: '🎭', name: 'Drama & Theatre', tag: 'Arts', desc: 'Two major productions per year plus workshops with visiting Mozambican artists and directors.' },
-  { icon: '🎵', name: 'Music Ensemble', tag: 'Arts', desc: 'Western classical and traditional Mozambican music programmes, choir, band and individual tuition.' },
-  { icon: '🧪', name: 'Science Club', tag: 'STEM', desc: 'Weekly lab sessions, national science competitions and participation in East African science fairs.' },
-  { icon: '📰', name: 'Student Magazine', tag: 'Media', desc: 'Student-run termly publication covering campus news, opinion, arts reviews and interviews.' },
-  { icon: '🌱', name: 'Eco Council', tag: 'Service', desc: 'Student-led environmental initiatives including campus composting, beach clean-ups and tree planting.' },
-  { icon: '💻', name: 'Coding & Robotics', tag: 'STEM', desc: 'Programming workshops, hackathons and an annual robotics challenge open to all year groups.' },
-  { icon: '🏛', name: 'Student Council', tag: 'Leadership', desc: 'Elected student representatives who collaborate with school leadership on campus policy and events.' },
+  { Icon: MunIcon, name: 'Model United Nations', tag: 'Leadership', desc: 'Annual MUN conferences hosted at AKA Maputo draw delegates from across Mozambique and the region.' },
+  { Icon: DramaIcon, name: 'Drama & Theatre', tag: 'Arts', desc: 'Two major productions per year plus workshops with visiting Mozambican artists and directors.' },
+  { Icon: MusicIcon, name: 'Music Ensemble', tag: 'Arts', desc: 'Western classical and traditional Mozambican music programmes, choir, band and individual tuition.' },
+  { Icon: ScienceIcon, name: 'Science Club', tag: 'STEM', desc: 'Weekly lab sessions, national science competitions and participation in East African science fairs.' },
+  { Icon: MagazineIcon, name: 'Student Magazine', tag: 'Media', desc: 'Student-run termly publication covering campus news, opinion, arts reviews and interviews.' },
+  { Icon: EcoIcon, name: 'Eco Council', tag: 'Service', desc: 'Student-led environmental initiatives including campus composting, beach clean-ups and tree planting.' },
+  { Icon: CodingIcon, name: 'Coding & Robotics', tag: 'STEM', desc: 'Programming workshops, hackathons and an annual robotics challenge open to all year groups.' },
+  { Icon: CouncilIcon, name: 'Student Council', tag: 'Leadership', desc: 'Elected student representatives who collaborate with school leadership on campus policy and events.' },
 ]
 
 export default function StudentLife() {
@@ -39,8 +41,14 @@ export default function StudentLife() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="Activities" 
+        description="Beyond the classroom, our students engage in a vibrant co-curricular programme spanning leadership, arts, STEM, sports and service. Life at AKA Maputo develops the whole person."
+        subtitle="Life at AKA Maputo"
+        subtext="A community that thrives beyond the timetable — in sports halls, rehearsal rooms, community gardens and the streets of Maputo. Learning never stops here."
+      />
 
-      <section className="pg-hero">
+      <section className="pg-hero" style={{ display: 'none' }}>
         <div className="pg-hero-bg-grid" />
         <div className="pg-hero-accent" />
         <div className="pg-hero-content">
@@ -88,14 +96,17 @@ export default function StudentLife() {
       <div className="sl-activities" id="activities">
         <div className="pg-tag">Clubs & Societies</div>
         <div className="sl-act-grid">
-          {activities.map((a, i) => (
-            <div className="sl-act-card pg-reveal" key={i}>
-              <div className="sl-act-icon">{a.icon}</div>
-              <div className="sl-act-name">{a.name}</div>
-              <div className="sl-act-tag">{a.tag}</div>
-              <div className="sl-act-desc">{a.desc}</div>
-            </div>
-          ))}
+          {activities.map((a, i) => {
+            const IconComponent = a.Icon;
+            return (
+              <div className="sl-act-card pg-reveal" key={i}>
+                <div className="sl-act-icon"><IconComponent style={{ width: '32px', height: '32px' }} /></div>
+                <div className="sl-act-name">{a.name}</div>
+                <div className="sl-act-tag">{a.tag}</div>
+                <div className="sl-act-desc">{a.desc}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
 

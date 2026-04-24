@@ -23,8 +23,6 @@ export default function Navbar() {
       <ul className="nav-links">
         <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/academics" className="nav-link">Academics</Link></li>
-        <li><Link to="/achievements" className="nav-link">Achievements</Link></li>
-        <li><Link to="/campus" className="nav-link">Campus</Link></li>
         <li className="nav-dropdown">
           <a href="#" className="nav-link">Admissions</a>
           <div className="nav-dropdown-menu">
@@ -32,16 +30,17 @@ export default function Navbar() {
             <a href="#">Fees for 2026</a>
           </div>
         </li>
-        <li><Link to="/student-life" className="nav-link">Activities</Link></li>
         <li className="nav-dropdown">
-          <a href="#" className="nav-link">About</a>
+          <a href="#" className="nav-link">Student Life</a>
           <div className="nav-dropdown-menu">
-            <Link to="/about">Our Story</Link>
-            <Link to="/student-life">Student Life</Link>
+            <Link to="/student-life">Activities</Link>
+            <Link to="/campus">Campus</Link>
+            <Link to="/achievements">Achievements</Link>
           </div>
         </li>
-        <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        <li><Link to="/about" className="nav-link">About</Link></li>
         <li><Link to="/news" className="nav-link">News</Link></li>
+        <li><Link to="/contact" className="nav-link">Contact</Link></li>
       </ul>
     </nav>
   )

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SectionsHeader from '../components/SectionsHeader'
 import '../pages.css'
 
 const Photo = ({ caption, bg }: { caption: string; bg?: string }) => (
@@ -52,8 +53,13 @@ export default function News() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="News" 
+        description="Stay updated with the latest stories from our school community. From academic achievements and community service to cultural events and student recognition."
+        subtitle="AKA Maputo News"
+      />
 
-      <div className="nw-masthead">
+      <div className="nw-masthead" style={{ display: 'none' }}>
         <div className="nw-mast-top">
           <div>
             <div className="pg-eyebrow" style={{ marginBottom: 16 }}>Latest · News · Stories</div>

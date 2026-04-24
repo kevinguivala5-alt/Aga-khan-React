@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { FootballIcon, SwimmingIcon, BasketballIcon, TennisIcon, AthleticsIcon, VolleyballIcon, SolarIcon, WaterIcon, WasteIcon } from '../components/Icons'
 import '../pages.css'
 
 const Photo = ({ caption }: { caption: string }) => (
@@ -42,12 +43,12 @@ const facilities = [
 ]
 
 const sports = [
-  { icon: '⚽', name: 'Football', detail: '2 full-size pitches' },
-  { icon: '🏊', name: 'Swimming', detail: '25m heated pool' },
-  { icon: '🏀', name: 'Basketball', detail: '2 indoor courts' },
-  { icon: '🎾', name: 'Tennis', detail: '4 hard courts' },
-  { icon: '🏃', name: 'Athletics', detail: '400m running track' },
-  { icon: '🏐', name: 'Volleyball', detail: 'Indoor & outdoor' },
+  { Icon: FootballIcon, name: 'Football', detail: '2 full-size pitches' },
+  { Icon: SwimmingIcon, name: 'Swimming', detail: '25m heated pool' },
+  { Icon: BasketballIcon, name: 'Basketball', detail: '2 indoor courts' },
+  { Icon: TennisIcon, name: 'Tennis', detail: '4 hard courts' },
+  { Icon: AthleticsIcon, name: 'Athletics', detail: '400m running track' },
+  { Icon: VolleyballIcon, name: 'Volleyball', detail: 'Indoor & outdoor' },
 ]
 
 export default function Campus() {
@@ -122,13 +123,16 @@ export default function Campus() {
             <a href="/student-life" className="pg-btn pg-btn-green" style={{ marginTop: 8, display: 'inline-block' }}>Student Life</a>
           </div>
           <div className="ca-sports-grid">
-            {sports.map((s, i) => (
-              <div className="ca-sport-card" key={i}>
-                <div className="ca-sport-icon">{s.icon}</div>
-                <div className="ca-sport-name">{s.name}</div>
-                <div className="ca-sport-detail">{s.detail}</div>
-              </div>
-            ))}
+            {sports.map((s, i) => {
+              const IconComponent = s.Icon;
+              return (
+                <div className="ca-sport-card" key={i}>
+                  <div className="ca-sport-icon"><IconComponent style={{ width: '32px', height: '32px' }} /></div>
+                  <div className="ca-sport-name">{s.name}</div>
+                  <div className="ca-sport-detail">{s.detail}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -141,18 +145,21 @@ export default function Campus() {
         </div>
         <div className="ca-sust-items">
           {[
-            { icon: '☀', title: 'Solar Energy', body: 'Rooftop solar panels supply a significant share of campus electricity, reducing dependence on the grid and cutting carbon emissions.' },
-            { icon: '💧', title: 'Water Management', body: 'Rainwater harvesting and efficient fixtures reduce total water consumption by over 30% compared to conventional campuses.' },
-            { icon: '♻', title: 'Waste Reduction', body: 'Composting, recycling and a zero-single-use-plastic policy across the campus canteen and boarding facilities.' },
-          ].map((s, i) => (
-            <div className="ca-sust-item" key={i}>
-              <div className="ca-sust-icon">{s.icon}</div>
-              <div>
-                <div className="ca-sust-item-title">{s.title}</div>
-                <div className="ca-sust-item-body">{s.body}</div>
+            { Icon: SolarIcon, title: 'Solar Energy', body: 'Rooftop solar panels supply a significant share of campus electricity, reducing dependence on the grid and cutting carbon emissions.' },
+            { Icon: WaterIcon, title: 'Water Management', body: 'Rainwater harvesting and efficient fixtures reduce total water consumption by over 30% compared to conventional campuses.' },
+            { Icon: WasteIcon, title: 'Waste Reduction', body: 'Composting, recycling and a zero-single-use-plastic policy across the campus canteen and boarding facilities.' },
+          ].map((s, i) => {
+            const IconComponent = s.Icon;
+            return (
+              <div className="ca-sust-item" key={i}>
+                <div className="ca-sust-icon"><IconComponent style={{ width: '28px', height: '28px' }} /></div>
+                <div>
+                  <div className="ca-sust-item-title">{s.title}</div>
+                  <div className="ca-sust-item-body">{s.body}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

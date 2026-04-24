@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import SectionsHeader from '../components/SectionsHeader'
+import logo from '../assets/images (1).png'
+import { InquiryIcon, LearningIcon, PluralismIcon, ServiceIcon } from '../components/Icons'
 import '../about.css'
 
 export default function About() {
@@ -22,9 +25,14 @@ export default function About() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="About" 
+        description="Founded in 2013, Aga Khan Academy Maputo embodies the Aga Khan commitment to educational excellence, ethical leadership and cultural pluralism. We are an IB World School serving students from Pre-K through Grade 12."
+        subtitle="Educating leaders for a better world"
+      />
 
       {/* ── HERO ── */}
-      <section className="ab-hero">
+      <section className="ab-hero" style={{ display: 'none' }}>
         <div className="ab-hero-left">
           <div className="ab-eyebrow">Est. Maputo, Mozambique</div>
           <h1 className="ab-hero-title">
@@ -126,17 +134,20 @@ export default function About() {
         </p>
         <div className="ab-pillars reveal" style={{ transitionDelay: '0.3s' }}>
           {[
-            { icon: '◈', name: 'Intellectual Rigour', desc: 'The IB curriculum challenges students to think deeply, question boldly and connect learning across disciplines.' },
-            { icon: '⬡', name: 'Ethical Leadership', desc: 'We cultivate character alongside academic achievement — developing leaders of principle and compassion.' },
-            { icon: '◎', name: 'Cultural Pluralism', desc: 'With 40+ nationalities on campus, students learn to understand and celebrate the diversity of human experience.' },
-            { icon: '⊕', name: 'Service & Action', desc: 'Every student is called to contribute — to their community, their nation, and the wider world.' },
-          ].map((p, i) => (
-            <div className="ab-pillar" key={i}>
-              <div className="ab-pillar-icon">{p.icon}</div>
-              <div className="ab-pillar-name">{p.name}</div>
-              <div className="ab-pillar-desc">{p.desc}</div>
-            </div>
-          ))}
+            { Icon: InquiryIcon, name: 'Intellectual Rigour', desc: 'The IB curriculum challenges students to think deeply, question boldly and connect learning across disciplines.' },
+            { Icon: LearningIcon, name: 'Ethical Leadership', desc: 'We cultivate character alongside academic achievement — developing leaders of principle and compassion.' },
+            { Icon: PluralismIcon, name: 'Cultural Pluralism', desc: 'With 40+ nationalities on campus, students learn to understand and celebrate the diversity of human experience.' },
+            { Icon: ServiceIcon, name: 'Service & Action', desc: 'Every student is called to contribute — to their community, their nation, and the wider world.' },
+          ].map((p, i) => {
+            const IconComponent = p.Icon;
+            return (
+              <div className="ab-pillar" key={i}>
+                <div className="ab-pillar-icon"><IconComponent style={{ width: '32px', height: '32px' }} /></div>
+                <div className="ab-pillar-name">{p.name}</div>
+                <div className="ab-pillar-desc">{p.desc}</div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -204,11 +215,7 @@ export default function About() {
       {/* ── FOOTER ── */}
       <footer className="ab-footer">
         <div className="ab-footer-logo">
-          <div className="nav-logo-emblem" style={{ width: 36, height: 36 }}>
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
+          <img src={logo} alt="Aga Khan Academy Logo" />
           <span>Aga Khan Academy Maputo</span>
         </div>
         <span className="ab-footer-copy">© 2026 Aga Khan Academy Maputo. A programme of the AKDN.</span>

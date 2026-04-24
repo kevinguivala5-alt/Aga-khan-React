@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SectionsHeader from '../components/SectionsHeader'
+import { InquiryIcon, MindednessIcon, LearningIcon, ServiceIcon, ActionIcon, LanguageIcon } from '../components/Icons'
 import '../pages.css'
 
 const Photo = ({ caption, bg }: { caption: string; bg?: string }) => (
@@ -100,9 +102,15 @@ export default function Academics() {
   return (
     <>
       <Navbar />
+      <SectionsHeader 
+        title="Academics" 
+        description="Explore our comprehensive IB World School curriculum designed to nurture inquiry, critical thinking and ethical leadership across our three programmes: PYP, MYP and Diploma."
+        subtitle="An education that builds the whole person"
+        subtext="Three internationally recognised IB programmes, delivered with the distinctive Aga Khan commitment to ethical leadership and cultural understanding."
+      />
 
       {/* HERO */}
-      <section className="pg-hero">
+      <section className="pg-hero" style={{ display: 'none' }}>
         <div className="pg-hero-bg-grid" />
         <div className="pg-hero-accent" />
         <div className="pg-hero-content">
@@ -131,23 +139,26 @@ export default function Academics() {
       </div>
 
       {/* IB PHILOSOPHY */}
-      <div className="ac-philosophy">
+      <div className="ac-philosophy pg-reveal">
         {[
-          { icon: '◈', text: 'Inquiry-Based Learning' },
-          { icon: '⬡', text: 'International Mindedness' },
-          { icon: '◎', text: 'Holistic Development' },
-          { icon: '⊕', text: 'Ethical Leadership' },
-          { icon: '◇', text: 'Action & Reflection' },
-          { icon: '○', text: 'Multilingualism' },
-        ].map((p, i, arr) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 0, flexShrink: 0 }}>
-            <div className="ac-phil-item">
-              <div className="ac-phil-icon">{p.icon}</div>
-              <span className="ac-phil-text">{p.text}</span>
+          { Icon: InquiryIcon, text: 'Inquiry-Based Learning' },
+          { Icon: MindednessIcon, text: 'International Mindedness' },
+          { Icon: LearningIcon, text: 'Holistic Development' },
+          { Icon: ServiceIcon, text: 'Ethical Leadership' },
+          { Icon: ActionIcon, text: 'Action & Reflection' },
+          { Icon: LanguageIcon, text: 'Multilingualism' },
+        ].map((p, i, arr) => {
+          const IconComponent = p.Icon;
+          return (
+            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 0, flexShrink: 0 }}>
+              <div className="ac-phil-item">
+                <div className="ac-phil-icon"><IconComponent style={{ width: '20px', height: '20px' }} /></div>
+                <span className="ac-phil-text">{p.text}</span>
+              </div>
+              {i < arr.length - 1 && <div className="ac-phil-sep" style={{ marginLeft: 40 }} />}
             </div>
-            {i < arr.length - 1 && <div className="ac-phil-sep" style={{ marginLeft: 40 }} />}
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* PROGRAMMES */}
@@ -208,25 +219,6 @@ export default function Academics() {
             <div className="ac-subject-card" key={i}>
               <div className="ac-subj-area">{s.area}</div>
               <div className="ac-subj-name">{s.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* DESTINATIONS */}
-      <div className="ac-destinations pg-reveal">
-        <div className="ac-dest-header">
-          <div className="pg-tag">Where Graduates Go</div>
-          <h2 className="pg-h2">University <em>Destinations</em></h2>
-        </div>
-        <div className="ac-dest-grid">
-          {destinations.map((d, i) => (
-            <div className="ac-dest-item" key={i}>
-              <div>
-                <div className="ac-dest-name">{d.name}</div>
-                <div className="ac-dest-country">{d.country}</div>
-              </div>
-              <div className="ac-dest-year">{d.year}</div>
             </div>
           ))}
         </div>

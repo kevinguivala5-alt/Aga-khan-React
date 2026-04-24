@@ -3,8 +3,9 @@
 
 .ab-hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -13,10 +14,13 @@
   background: var(--charcoal);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 100px 60px 80px;
+  justify-content: center;
+  padding: 100px 60px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
 }
 .ab-hero-left::before {
   content: '';
@@ -36,7 +40,8 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  justify-content: center;
 }
 .ab-eyebrow::before {
   content: '';
@@ -45,7 +50,7 @@
 }
 
 .ab-hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(56px, 6vw, 88px);
   font-weight: 300;
   line-height: 0.95;
@@ -62,18 +67,14 @@
   gap: 40px;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 32px;
+  justify-content: center;
 }
 .ab-meta-item { display: flex; flex-direction: column; gap: 6px; }
-.ab-meta-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-family: 'DM Sans', sans-serif; }
-.ab-meta-value { font-size: 13px; color: white; font-weight: 500; font-family: 'DM Sans', sans-serif; }
+.ab-meta-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-family: 'Inter', sans-serif; }
+.ab-meta-value { font-size: 13px; color: white; font-weight: 500; font-family: 'Inter', sans-serif; }
 
 .ab-hero-right {
-  background: var(--cream);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 .ab-hero-grid-bg {
   position: absolute; inset: 0;
@@ -103,14 +104,14 @@
   align-items: center; justify-content: center; gap: 8px;
 }
 .ab-circle-year {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 72px; font-weight: 300;
   color: var(--green-deep); line-height: 1;
 }
 .ab-circle-sub {
   font-size: 9px; letter-spacing: 0.25em;
   text-transform: uppercase; color: var(--muted);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 @keyframes abSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
@@ -129,7 +130,7 @@
   font-size: 11px; letter-spacing: 0.18em;
   text-transform: uppercase; color: rgba(255,255,255,0.85);
   padding: 0 8px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-ticker-dot { color: var(--accent-light); opacity: 0.6; }
 @keyframes abTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -140,7 +141,7 @@
   text-transform: uppercase; color: var(--accent);
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 56px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-section-tag::after {
   content: ''; flex: 1; max-width: 60px;
@@ -165,20 +166,20 @@
 }
 .ab-story-aside { position: sticky; top: 120px; }
 .ab-story-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 140px; font-weight: 300; line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px rgba(43,95,62,0.12);
   margin-bottom: 24px; display: block;
 }
 .ab-story-aside-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--text);
 }
 .ab-story-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(36px, 4vw, 54px);
   font-weight: 300; line-height: 1.1;
   margin-bottom: 40px; color: var(--text);
@@ -188,7 +189,7 @@
 .ab-story-body p {
   font-size: 14px; line-height: 1.85;
   color: #444; font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-story-body p strong { color: var(--text); font-weight: 500; }
 
@@ -219,19 +220,19 @@
 }
 .ab-tl-item:hover::before { width: 100%; }
 .ab-tl-year {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 52px; font-weight: 300;
   color: var(--accent-light); line-height: 1; margin-bottom: 20px;
 }
 .ab-tl-label {
   font-size: 9px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--muted);
-  margin-bottom: 12px; font-family: 'DM Sans', sans-serif;
+  margin-bottom: 12px; font-family: 'Inter', sans-serif;
 }
 .ab-tl-desc {
   font-size: 13px; line-height: 1.75;
   color: rgba(255,255,255,0.6); font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* MISSION */
@@ -241,7 +242,7 @@
   padding: 140px 60px;
 }
 .ab-mission-quote {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(32px, 4vw, 62px);
   font-weight: 300; line-height: 1.2;
   max-width: 880px; margin: 0 auto 56px;
@@ -253,7 +254,7 @@
   color: var(--muted); text-transform: uppercase;
   max-width: 500px; margin: 0 auto 60px;
   line-height: 1.9; font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-pillars {
   display: flex; justify-content: center;
@@ -267,10 +268,10 @@
   width: 56px; height: 56px;
   border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px; color: var(--green);
+  color: var(--green);
 }
 .ab-pillar-name {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--text);
@@ -278,7 +279,7 @@
 .ab-pillar-desc {
   font-size: 12px; line-height: 1.75;
   color: var(--muted); text-align: center;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* PROGRAMMES */
@@ -288,13 +289,13 @@
   gap: 80px; margin-bottom: 80px;
 }
 .ab-programmes-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(40px, 4.5vw, 60px);
   font-weight: 300; line-height: 1.05; color: var(--text);
 }
 .ab-programmes-header p {
   font-size: 13px; line-height: 1.85; color: #555;
-  align-self: end; font-family: 'DM Sans', sans-serif;
+  align-self: end; font-family: 'Inter', sans-serif;
 }
 .ab-prog-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -313,30 +314,30 @@
 }
 .ab-prog-card:hover::after { height: 100%; }
 .ab-prog-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px; color: var(--accent);
   margin-bottom: 28px;
 }
 .ab-prog-name {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px; font-weight: 600;
   color: var(--text); margin-bottom: 8px; line-height: 1.2;
 }
 .ab-prog-tag {
   font-size: 9px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--muted);
-  margin-bottom: 28px; font-family: 'DM Sans', sans-serif;
+  margin-bottom: 28px; font-family: 'Inter', sans-serif;
 }
 .ab-prog-desc {
   font-size: 13px; line-height: 1.8;
   color: #555; font-weight: 300;
-  margin-bottom: 32px; font-family: 'DM Sans', sans-serif;
+  margin-bottom: 32px; font-family: 'Inter', sans-serif;
 }
 .ab-prog-status {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 10px; letter-spacing: 0.15em;
   text-transform: uppercase; color: var(--green);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-prog-status::before {
   content: ''; width: 6px; height: 6px;
@@ -357,7 +358,7 @@
   display: flex; flex-direction: column; justify-content: space-between;
 }
 .ab-values-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(48px, 5vw, 72px);
   font-weight: 300; line-height: 1;
   color: white; margin-bottom: 48px;
@@ -365,7 +366,7 @@
 .ab-values-heading em { font-style: italic; color: var(--accent-light); }
 .ab-values-stat { display: flex; flex-direction: column; gap: 8px; }
 .ab-values-stat-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 80px; font-weight: 300;
   color: var(--accent-light); line-height: 1;
 }
@@ -373,7 +374,7 @@
 .ab-values-stat-label {
   font-size: 10px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--muted);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-values-right { display: grid; grid-template-rows: repeat(3, 1fr); }
 .ab-value-item {
@@ -386,16 +387,16 @@
 .ab-value-item:hover { background: rgba(255,255,255,0.02); }
 .ab-value-num {
   font-size: 10px; letter-spacing: 0.2em;
-  color: var(--accent-light); font-family: 'DM Sans', sans-serif;
+  color: var(--accent-light); font-family: 'Inter', sans-serif;
 }
 .ab-value-name {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px; font-weight: 600; color: white;
 }
 .ab-value-desc {
   font-size: 13px; line-height: 1.8;
   color: rgba(255,255,255,0.5); font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* CTA */
@@ -406,7 +407,7 @@
   align-items: center; text-align: center; gap: 32px;
 }
 .ab-cta-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(38px, 4.5vw, 64px);
   font-weight: 300; line-height: 1.1;
   color: white; max-width: 680px;
@@ -414,14 +415,14 @@
 .ab-cta p {
   font-size: 14px; color: rgba(255,255,255,0.75);
   max-width: 420px; line-height: 1.75;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
 .ab-btn {
   padding: 15px 40px;
   font-size: 11px; letter-spacing: 0.2em;
   text-transform: uppercase; text-decoration: none;
-  font-family: 'DM Sans', sans-serif; font-weight: 600;
+  font-family: 'Inter', sans-serif; font-weight: 600;
   transition: all 0.2s; cursor: pointer;
 }
 .ab-btn-dark {
@@ -445,18 +446,24 @@
 }
 .ab-footer-logo {
   display: flex; align-items: center; gap: 12px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px; font-weight: 600;
   letter-spacing: 0.06em; color: white;
 }
+.ab-footer-logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 .ab-footer-copy {
   font-size: 11px; color: var(--muted);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-footer-location {
   font-size: 11px; color: var(--muted);
   display: flex; align-items: center; gap: 8px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .ab-footer-location::before { content: '◉'; color: var(--accent-light); font-size: 8px; }
 

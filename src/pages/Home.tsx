@@ -104,7 +104,7 @@ export default function Home() {
             <br/><br/>
             Our campus nurtures <strong>inquiring, principled students</strong> who are prepared to lead — locally and globally. Through the internationally recognised IB curriculum and the distinctive Aga Khan Curricular Strands, we develop the whole child: intellectually, ethically and culturally.
           </p>
-          <Link to="/about" className="btn-primary" style={{ alignSelf: 'flex-start' }}>Our Full Story</Link>
+          <Link to="/about" className="btn-primary" style={{ alignSelf: 'center' }}>Our Full Story</Link>
         </div>
         <div className="welcome-media">
           <img src={schoolImage1} alt="Campus Life Photo" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="campus-inner">
           <div className="campus-gallery">
             <div className="campus-img">
-              <img src={schoolImage2} alt="Aerial Campus View" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <PhotoPlaceholder caption="Aerial Campus View" />
               <div className="campus-tag">Maputo Campus</div>
             </div>
             <div className="campus-img" style={{ height: 180 }}>
