@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import schoolImage1 from '../assets/WhatsApp Image 2026-04-18 at 07.44.44.jpeg'
-import schoolImage2 from '../assets/WhatsApp Image 2026-04-18 at 07.44.44 (1).jpeg'
 
 const PhotoPlaceholder = ({ caption, bg }: { caption: string; bg?: string }) => (
   <div className="img-placeholder" style={bg ? { background: bg } : undefined}>

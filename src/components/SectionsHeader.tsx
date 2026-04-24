@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 interface SectionsHeaderProps {
   title: string
   description?: string
